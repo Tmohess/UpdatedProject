@@ -36,6 +36,7 @@ body{
 
 }
 
+
 img {
  
   width: 100%;
@@ -46,19 +47,22 @@ img {
 
 #search {
   position: relative;
-  padding: 20vh 0px 20vh 0px;
+  padding: 20vh 0 20vh 0;
   background-color:white;
   box-shadow: 0 4px 3px 0 rgba(77, 71, 71, 0.2);
   width: 50%;
   display: flex;
   flex-grow: 7;
   background-image: linear-gradient( 102.2deg,  rgba(251,166,60,1) 1.2%, rgba(213,57,44,1) 107.5% );
+   border-radius: 0px 30px 30px 0px;
 
 }
 
 
  h1 { 
-   display: block;
+   position: absolute;
+   top: 25%;
+   left:25%;
   margin: 0 auto 25px auto;
   text-align: center;
   font-size: 1.92em;
@@ -68,6 +72,7 @@ img {
 
  h4 {
   display: block;
+  padding: 5vh 0 5vh 0;
   margin: 0 auto 60px auto;
   text-align: center;
   font-weight: 400;
@@ -93,6 +98,7 @@ img {
     }
 
 #results {
+  display:block;
   background-color: grey; 
   width: 100%;
   position: absolute;
@@ -102,16 +108,44 @@ img {
 @media screen and (max-width: 600px) {
  .container {
         flex-direction: column;
-        flex-grow:4; 
-        po
+        flex-grow: 9;
+        background-image: linear-gradient( 102.2deg,  rgba(251,166,60,1) 1.2%, rgba(213,57,44,1) 107.5% );
+
+       
    }
 
   #image{
-    flex-direction: column;
-    flex-grow:7; 
+   width: 100%;
+   flex-grow: 7; 
+    
   }
 
+img{
+  border-radius: 0px 0px 30px 30px;
+}
+
 #search {
-  flex-direction: column;
- flex-grow:4; 
+ width: 100%;
+ flex-grow: 2;
+ background: transparent;
+ padding: 5vh 0 2vh 0; 
+
+
+ 
+}
+
+#searchbar{
+    width: 80%;
+  
+}
+
+h1{
+ top:15%;
+}
+
+#results {
+  background-color: grey; 
+  width: 100%;
+  position: absolute;
+  top: 95vh;
 }
