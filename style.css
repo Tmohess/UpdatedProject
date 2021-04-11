@@ -4,13 +4,20 @@
   padding: 0;
 }
 
+html{
+  overflow-y: overlay;
+  overflow-x: hidden;
+  
+}
+
 body{
   font-family: 'Montserrat Alternates', sans-serif;
   color: #FFFFFF;
   background-image: url("2.png");
   background-repeat: no-repeat;
   position: relative;
-
+  display:flex; 
+ 
 }
 
 .container{
@@ -18,10 +25,11 @@ body{
   width: 100%;
   display:flex; 
   flex-grow: 8;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 40%);
+  overflow: hidden;
   
 }
 
@@ -34,6 +42,25 @@ body{
   width: 50%;
 
 
+}
+
+.navbar {
+  overflow: hidden;
+  background-color:rgba(252, 166, 60, 0.767);
+  width:100%;
+}
+
+.navbar a{
+  float: left;
+  font-size: 16px;
+  font-style: bold;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a:hover {
+  background-color: rgb(211, 81, 81);
 }
 
 img {
@@ -61,10 +88,10 @@ img {
  h1 { 
   
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 50%;
   margin-right: -50%;
-    transform: translate(-50%, -10%);
+  transform: translate(-50%, -10%);
      
   margin: 0 auto 60px auto;
   font-size: 1.92em;
@@ -75,7 +102,7 @@ img {
  h4 {
   display: block;
   position: absolute;
-  top: 45%;
+  top: 40%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -10%);
@@ -103,26 +130,42 @@ img {
     z-index: 2 ;
     }
 
-#results {
+  #results {
    background-color: grey; 
+   position: absolute;
    width: 100%;
-  position: absolute;
-  top: 90vh;
+   top: 84vh;
+
  
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 675px) {
  .container {
         flex-direction: column;
         flex-grow: 9;
+        transform: translate(-50%, 15%);
         background-image: linear-gradient( 102.2deg,  rgba(251,166,60,1) 1.2%, rgba(213,57,44,1) 107.5% );
+
+     
 
        
    }
 
+
+   h1{
+     transform: translate(-50%, -60%);
+   }
+
+   h4 {
+     transform: translate(-50%, -40%);
+     font-size: medium;
+}
+
+   
+
   #image{
    width: 100%;
-   flex-grow: 7; 
+   flex-grow: 1; 
     
   }
 
@@ -145,16 +188,11 @@ img{
   
 }
 
-h1{
- top:25%;
-}
-h4 {
-  top: 40%;
-}
 
-#results {
-  background-color: grey; 
+
+#results { 
   width: 100%;
   position: absolute;
   top: 94vh;
+}
 }
